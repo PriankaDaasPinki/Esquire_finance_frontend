@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaListUl, FaTrash } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const CreateVoucher = () => {
   const [rows, setRows] = useState([
@@ -8,16 +10,11 @@ const CreateVoucher = () => {
   ]);
   const [debitTotal, setDebitTotal] = useState(0);
   const [creditTotal, setCreditTotal] = useState(0);
-  // const [isSaveDisabled, setIsSaveDisabled] = useState(true);
   const [isDeleteDisabled, setIsDeleteDisabled] = useState(true);
-
-  useEffect(() => {
-    calculateTotals();
-    checkDeleteButtonState();
-    // checkSaveButtonState();
-  }, [rows]);
+  const [isSaveDisabled, setIsSaveDisabled] = useState(true);
 
   const addRow = () => {
+    toast("New Voucher Added");
     setRows([
       ...rows,
       { accountName: "", subType: "", comment: "", debit: "0", credit: "0" },
@@ -26,6 +23,7 @@ const CreateVoucher = () => {
 
   const removeRow = (index) => {
     const newRows = rows.filter((_, i) => i !== index);
+    toast("Voucher Deleted");
     setRows(newRows);
   };
 
@@ -52,16 +50,17 @@ const CreateVoucher = () => {
     setIsDeleteDisabled(rows.length == 2);
   };
 
-  // const checkSaveButtonState = () => {
-  //   console.log("debitTotal " + debitTotal);
-  //   console.log("creditTotal " + creditTotal);
-  //   const x = debitTotal === creditTotal ? "true" : "false";
-  //   console.log(x);
-  //   setIsSaveDisabled(x);
-  // };
-  // checkSaveButtonState();
-  // console.log("debitTotal out " + debitTotal);
-  // console.log("creditTotal out " + creditTotal);
+  const checkSaveButtonState = () => {
+    setIsSaveDisabled(!(debitTotal > 0 && debitTotal === creditTotal));
+    // (debitTotal > 0 && debitTotal === creditTotal) ? setIsSaveDisabled(false) : setIsSaveDisabled(true);
+    // (debitTotal === creditTotal || debitTotal != 0) && setIsSaveDisabled(false);
+  };
+
+  useEffect(() => {
+    calculateTotals();
+    checkDeleteButtonState();
+    checkSaveButtonState();
+  }, [rows, debitTotal, creditTotal]);
 
   return (
     <div className="container mx-auto p-2 rounded-sm border-2">
@@ -217,6 +216,7 @@ const CreateVoucher = () => {
                 >
                   Add More
                 </button>
+                <ToastContainer style={{ marginTop: "4rem" }} />
               </td>
               <td
                 colSpan="2"
@@ -239,13 +239,9 @@ const CreateVoucher = () => {
       <div className="px-2 flex pb-5 justify-end">
         <button
           className={`text-white px-3 py-1 rounded ${
-            debitTotal !== creditTotal
-              ? "bg-gray-400 cursor-not-allowed"
-              : debitTotal === 0
-              ? "bg-gray-400 cursor-not-allowed"
-              : "bg-green-700"
+            isSaveDisabled ? "bg-gray-400 cursor-not-allowed" : "bg-green-700"
           }`}
-          disabled={debitTotal !== creditTotal}
+          disabled={isSaveDisabled}
         >
           Save
         </button>
