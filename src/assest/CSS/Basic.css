@@ -1,0 +1,56 @@
+.user-details{
+    font-family: Inter;
+}
+
+.user-details-page-title{
+    align-items: center;
+    border-radius: 1px;
+    background: #FDECEC;
+    padding: 15px;
+}
+
+.user-details-page-title h1{
+    color: #2e6da4;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.ant-btn-primary {
+    color: #fff;
+    background-color: #1677ff !important;
+    box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+}
+
+.pr-item-data th,td,p {
+    font-family: Inter;
+}
+
+@media only screen and (max-width: 400px) {
+    .parent-category .react-tabs__tab {
+        font-size: 16px;
+    }
+    .page-title h1 {
+        font-size: 14px;
+
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .u-360px-overflow{
+        overflow-x: auto;
+        max-width: 355px;
+        scrollbar-width: thin;
+    }
+}
+
+
+.workorder-print-view td {
+    border: 1px solid black;
+  }
+
+.workorder-print-view th {
+    border: 1px solid black;
+  }

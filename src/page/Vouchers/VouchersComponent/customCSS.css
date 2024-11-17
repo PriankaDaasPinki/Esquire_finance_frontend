@@ -1,0 +1,20 @@
+/* Add this to your CSS file or within a <style> tag in your component */
+@media print {
+  @page {
+    size: landscape;
+    margin: 20mm 10mm 10mm 10mm; /* Adjust margins as needed */
+  }
+  .modal-body {
+    margin-top: 20px; /* Add top margin for print */
+  }
+
+  .voucherNumber{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .signature{
+    border-top: 1px solid black;
+    margin-top: 2rem;
+  }
+}

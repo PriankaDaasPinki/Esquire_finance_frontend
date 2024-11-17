@@ -1,0 +1,49 @@
+/* Tree container */
+.coa-tree {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  /* Tree nodes */
+  .coa-tree .rc-tree-node-content-wrapper {
+    font-size: 16px;
+    color: #333;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  .coa-tree .rc-tree-node-content-wrapper:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+  }
+  
+  /* Highlight the selected node */
+  .coa-tree .rc-tree-node-selected {
+    background-color: #007bff !important;
+    color: white;
+  }
+  
+  /* Add some padding and indentation for tree nodes */
+  /* .coa-tree .rc-tree-indent {
+    padding-left: 20px;
+  } */
+  
+  /* Customize the icon */
+  .coa-tree .rc-tree-switcher {
+    margin-right: 10px;
+  }
+  
+  /* Custom expanded/collapsed icon styles */
+  /* .coa-tree .rc-tree-switcher_open::before {
+    content: '▼';
+    color: #007bff;
+  }
+  
+  .coa-tree .rc-tree-switcher_close::before {
+    content: '►';
+    color: #007bff;
+  }
+   */

@@ -1,0 +1,40 @@
+.user-details{
+    font-family: Inter;
+}
+ 
+.user-details-page-title{
+    align-items: center;
+    border-radius: 1px;
+    background: #2e6da4;
+    padding: 15px;
+}
+ 
+.user-details-page-title h1{
+    color: #f1f4f7;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+ 
+.user-details-page-title div div div div div p{
+    color: #f1f4f7;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.permissions-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to next line if there's not enough space */
+    gap: 1rem; /* Adds space between items */
+  }
+  
+  .permission-item {
+    flex: 1 1 calc(33.333% - 1rem); /* Adjusts item width; change percentage to fit more or fewer items per row */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+  }
+  
+

@@ -1,0 +1,14 @@
+.page-title-head{
+    align-items: center;
+    border-radius: 1px;
+    background: #FDECEC;
+    padding: 15px;
+}
+.add-form-page-title h1{
+    color: #EB5757;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

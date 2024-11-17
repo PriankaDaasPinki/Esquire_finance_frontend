@@ -1,0 +1,35 @@
+.page-title-head{
+    align-items: center;
+    border-radius: 5px;
+    background: #ebebeb;
+    padding: 15px;
+}
+
+.page-title-head h1{
+    color: #2e6da4;
+    font-family: Poppins;
+    font-size: 19px !important;
+    font-style: normal;
+    font-weight: 600 !important;
+    line-height: normal;
+}
+
+
+.add-form-close-button{
+    display: flex;
+    padding: 4px 16px;
+    align-items: flex-start;
+    gap: 17px;
+    border-radius: 4px;
+    background: #2e6da4;
+}
+
+.add-form-close-button a{
+color: #FFF;
+text-align: center;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+}

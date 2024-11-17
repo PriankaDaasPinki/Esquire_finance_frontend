@@ -1,0 +1,63 @@
+.dashboard-card{
+    border-radius: 12px;
+    border: 1px solid #E8E7E7;
+    background: #FFF;
+    box-shadow: 0px 4px 6px 0px rgba(20, 19, 19, 0.09);
+    margin: 0px 10px 10px 10px;
+}
+
+.dashboard-card h1{
+    color: #000;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.received-count{
+    color: #272927;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.received-text{
+    color: #818181;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.st-unsa-text p{
+    color: #000;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.backlog-job-text{
+    color: var(--main-black, #000);
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.backlog-job-count{
+    display: flex;
+    height: 180px;
+    align-items: center;
+    gap: var(--borderRadius, 0px);
+    background: #2e6da4;
+    color: white;
+}
+.backlog-job-count p{
+    color: var(--main-white, #FFF);
+    font-family: Inter;
+    font-size: 41.566px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}

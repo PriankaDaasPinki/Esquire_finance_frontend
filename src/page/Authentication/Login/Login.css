@@ -1,0 +1,111 @@
+.login-input-field{
+    width: 339px;
+    height: 47px;
+    font-family: Poppins;
+    flex-shrink: 0;
+    border-radius: var(--1, 8px);
+    border: 1px solid #D9D9D9 !important;
+    background: #FFF !important;
+  }
+  
+
+.login-input-label{
+    color: #000;
+    font-family: fangsong;
+    font-weight: 600;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 135.5%;
+}
+
+.login-text{
+    width: 123px;
+    height: 44.999px;
+    flex-shrink: 0;
+    color: var(--Black, #2F2F2F);
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 135.5%; /* 43.36px */
+}
+
+.logo-right-side-text{
+    color: #2e6da4;
+    font-family: fangsong;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 10px;
+}
+
+.login-form-down-text{
+    color: #2e6da4;
+    font-family: fangsong;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 10px;
+}
+
+.remmber-text{
+    color: var(--Black, #2F2F2F);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135.5%; /* 21.68px */
+}
+
+.loginBtn{
+    display: flex;
+    width: 339px;
+    height: 47px;
+    justify-content: center;
+    align-items: center;
+    background: #2e6da4;
+    border-radius: 7px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 135.5%; /* 27.1px */
+}
+
+.loginClose{
+    width: 146.07px;
+    height: var(--none, 1px);
+    border-radius: var(--none, 0px);
+    background: #BFBFBF;
+}
+.loginCloseOR{
+    color: #979797;
+    font-family: Ponnala;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135.5%;
+}
+
+.AnotherLoginOption .googleLogin .facebookLogin .appleLogin{
+    width: 52px;
+    height: 52px;
+}
+
+.AnotherLoginOption .googleLogin a{
+    font-size: 30px;
+
+}
+.AnotherLoginOption .appleLogin a{
+    font-size: 30px;
+
+}
+.AnotherLoginOption .facebookLogin a{
+    font-size: 30px;
+    color: #1977F3;
+
+}

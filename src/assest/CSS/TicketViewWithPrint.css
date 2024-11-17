@@ -1,0 +1,133 @@
+.ticket-view-head .title{
+    color: #DC3F3F;
+    font-family: Ibarra Real Nova;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.ticket-view-head .address{
+color: #000;
+font-family: Ibarra Real Nova;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+
+.issuePreview{
+    border-radius: var(--1, 8px);
+    background: #FDECEC;
+    color: #E74A3B;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.information-head{
+    border-radius: var(--1, 8px);
+    background: #FDECEC;
+    color: #E74A3B;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.information-section{
+    border-radius: 10px;
+    border: 1px solid #EB5757;
+    background: #FFF;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.issue-category{
+    color: #656575;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.issue-section-title{
+    color: #EB5757;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+
+
+
+
+.ticket-print-view-head .title{
+    color: #DC3F3F;
+    font-family: Ibarra Real Nova;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.ticket-print-view-head .address{
+color: #000;
+font-family: Ibarra Real Nova;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+
+.print-issuePreview{
+    border-radius: var(--1, 8px);
+    background: #FDECEC;
+    color: #E74A3B;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.print-information-head{
+    border-radius: var(--1, 8px);
+    background: #FDECEC;
+    color: #E74A3B;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 9px;
+}
+
+.print-information-section{
+    border-radius: 10px;
+    border: 1px solid #EB5757;
+    font-size: 9px;
+    background: #FFF;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.print-issue-category{
+    color: #656575;
+    text-align: center;
+    font-family: Inter;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.print-issue-section-title{
+    color: #EB5757;
+    font-family: Inter;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+}
