@@ -17,7 +17,7 @@ const CreateVoucher = () => {
     toast("New Voucher Added");
     setRows([
       ...rows,
-      { accountName: "", subType: "", comment: "", debit: "0", credit: "0" },
+      { accountName: "", subType: "", comment: "", debit: "", credit: "" },
     ]);
   };
 
