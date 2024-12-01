@@ -33,8 +33,6 @@ const Login = () => {
         setShowPass(!showPass);
     };
 
-
-
     return (
         <div className='login-page bg-[#F4F3FB] mt-[-100px]'>
             <div className="md:flex justify-center items-center w-full h-screen">

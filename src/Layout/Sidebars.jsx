@@ -1,10 +1,10 @@
 import React from "react";
 import { Sidebar, Menu } from "react-pro-sidebar";
 import {
-  FaFile,
+  // FaFile,
   FaHome,
-  FaUser,
-  FaPiggyBank,
+  // FaUser,
+  // FaPiggyBank,
   FaPlay,
   FaUsers,
 } from "react-icons/fa";
@@ -24,7 +24,7 @@ const Sidebars = ({ toggleMenuVisibility }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const isAuthenticated = useSelector(selectIsLoggedIn); // Get the authentication state
-  const user = useSelector((state) => state.user.user); // Get the logged-in user data
+  // const user = useSelector((state) => state.user.user); // Get the logged-in user data
   const { hasPermission, hasPermissions } = usePermissions();
 
   const handleMenuClick = (path) => {
@@ -117,6 +117,35 @@ const Sidebars = ({ toggleMenuVisibility }) => {
                     path="/voucher-list"
                     currentPath={location.pathname}
                   />
+                )}
+              </CustomSubMenu>
+            )}
+            {hasPermissions([""]) && (
+              <CustomSubMenu label="CRM Pages" icon={<RiNewspaperLine />}>
+                {hasPermission("") && (
+                  <>
+                    <CustomSubMenuItem
+                      label="Gate Pass"
+                      icon={<FaPlay size={10} />}
+                      onClick={() => handleMenuClick("/gate-pass")}
+                      path="/gate-pass"
+                      currentPath={location.pathname}
+                    />
+                    <CustomSubMenuItem
+                      label="Sales Return"
+                      icon={<FaPlay size={10} />}
+                      onClick={() => handleMenuClick("/sales-return")}
+                      path="/sales-return"
+                      currentPath={location.pathname}
+                    />
+                    <CustomSubMenuItem
+                      label="Purchase Order"
+                      icon={<FaPlay size={10} />}
+                      onClick={() => handleMenuClick("/purchase-order")}
+                      path="/purchase-order"
+                      currentPath={location.pathname}
+                    />
+                  </>
                 )}
               </CustomSubMenu>
             )}

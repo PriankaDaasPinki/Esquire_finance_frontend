@@ -7,7 +7,7 @@ import TopBar from "./Topbar";
 import Home from "../page/Home";
 import Login from "../page/Authentication/Login/Login";
 import ProtectedRoute from "./ProtectedRoutes";
-import PublicRoute from "./PublicRoute";
+// import PublicRoute from "./PublicRoute";
 import PasswordChange from "../page/user/updatePassword";
 import UserList from "../page/user/UserList";
 import UserDetails from "../page/user/UserDetails";
@@ -26,9 +26,12 @@ import UserProfileUpdate from "../page/user/UserProfileUpdate";
 import OpeningBalancesList from "../page/OpeningBalances/OpeningBalancesList";
 import VoucherList from "../page/Vouchers/VoucherList";
 import CreateVoucher from "../page/Vouchers/CreateVoucher";
+import GatePass from "../page/CRM Pages/GatePass";
+import PurchaseOrder from "../page/CRM Pages/PurchaseOrder";
+import SalesReturn from "../page/CRM Pages/SalesReturn";
 
 const PageRoutes = () => {
-  const { hasPermission, hasPermissions } = usePermissions();
+  const { hasPermission } = usePermissions(); //hasPermissions
   const [menuVisible, setMenuVisible] = React.useState(false);
   const dispatch = useDispatch();
 
@@ -183,6 +186,7 @@ const PageRoutes = () => {
                   }
                 />
 
+                {/* prianka Added*/}
                 <Route
                   path="/voucher-list"
                   element={
@@ -196,6 +200,30 @@ const PageRoutes = () => {
                   element={
                     <ProtectedRoute>
                       {hasPermission("") && <CreateVoucher />}
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/gate-pass"
+                  element={
+                    <ProtectedRoute>
+                      {hasPermission("") && <GatePass />}
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/purchase-order"
+                  element={
+                    <ProtectedRoute>
+                      {hasPermission("") && <PurchaseOrder />}
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/sales-return"
+                  element={
+                    <ProtectedRoute>
+                      {hasPermission("") && <SalesReturn />}
                     </ProtectedRoute>
                   }
                 />
