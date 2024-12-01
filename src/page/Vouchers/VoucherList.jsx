@@ -8,10 +8,12 @@ import Modal from "./VouchersComponent/Modal";
 import { GrView } from "react-icons/gr";
 import { FaUndoAlt } from "react-icons/fa";
 import { IoAdd } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 function VoucherList() {
   // In your Javascript (external .js resource or <script> tag)
   const [isModalOpen, setModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     $(".js-example-basic-single").select2();
@@ -50,7 +52,7 @@ function VoucherList() {
         <div className="flex gap-2">
           <button
             className="bg-blue-600 text-white px-4 rounded flex "
-            onClick={() => (window.location.href = "/voucher-create")}
+            onClick={() => {navigate("/voucher-create")}}
           >
             <IoAdd className="mr-2 size-6" /><p>Create Voucher</p>
           </button>

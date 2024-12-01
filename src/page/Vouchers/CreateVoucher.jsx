@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaListUl, FaTrash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -12,6 +13,7 @@ const CreateVoucher = () => {
   const [creditTotal, setCreditTotal] = useState(0);
   const [isDeleteDisabled, setIsDeleteDisabled] = useState(true);
   const [isSaveDisabled, setIsSaveDisabled] = useState(true);
+  const navigate = useNavigate();
 
   const addRow = () => {
     toast("New Voucher Added");
@@ -47,20 +49,19 @@ const CreateVoucher = () => {
   };
 
   const checkDeleteButtonState = () => {
-    setIsDeleteDisabled(rows.length == 2);
+    setIsDeleteDisabled(rows.length === 2);
   };
 
   const checkSaveButtonState = () => {
     setIsSaveDisabled(!(debitTotal > 0 && debitTotal === creditTotal));
-    // (debitTotal > 0 && debitTotal === creditTotal) ? setIsSaveDisabled(false) : setIsSaveDisabled(true);
-    // (debitTotal === creditTotal || debitTotal != 0) && setIsSaveDisabled(false);
   };
 
   useEffect(() => {
     calculateTotals();
     checkDeleteButtonState();
     checkSaveButtonState();
-  }, [rows, debitTotal, creditTotal]);
+    // eslint-disable-next-line
+  }, [rows, calculateTotals]);
 
   return (
     <div className="container mx-auto p-2 rounded-sm border-2">
@@ -68,7 +69,8 @@ const CreateVoucher = () => {
         <p className="text-xl font-semibold text-gray-800">Create Voucher</p>
         <button
           className="btn bg-cyan-600 text-white px-2 py-1 rounded flex align-middle"
-          onClick={() => (window.location = "/voucher-list")}
+          onClick={() => {navigate("/voucher-list")}}
+          // window.location = "/voucher-list"
         >
           <FaListUl className="mr-2 size-6 mx-auto" /> <p>Vouchers</p>
         </button>
