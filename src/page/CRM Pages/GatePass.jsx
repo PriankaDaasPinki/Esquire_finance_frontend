@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useRef } from "react";
+import { FaPrint } from "react-icons/fa";
 
 const GatePass = () => {
+  const gatePass = useRef();
+  const handlePrint = () => {
+    const printContents = gatePass.current.innerHTML;
+    const originalContents = document.body.innerHTML;
+
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+    window.location.reload(); // Reload to restore event listeners if necessary
+  };
+
   return (
-    <div className ="pe-3 pt-2 object-cover">
-      <div className="container-lg mx-auto rounded-sm border-2 py-8">
+    <div className="pe-3 pt-2 object-cover">
+      <button
+        className="bg-yellow-400 text-white px-3 py-1 rounded mr-2 flex align-middle"
+        onClick={handlePrint}
+      >
+        <FaPrint className="mr-2 size-5" /> <p>Print</p>
+      </button>
+      
+      <div className="container-lg mx-auto rounded-sm border-2 py-8" ref={gatePass}>
         <div className="text-center">
           <h1 className="self-center font-semibold text-gray-800 text-2xl">
             Esauire Customer Care Ltd
@@ -25,7 +44,9 @@ const GatePass = () => {
         <div className="py-4 border-t border-gray-950 flex justify-evenly">
           <div>
             <div className="flex pb-2">
-              <p className="font-semibold w-80 pr-10 text-right">Issue Order No:</p>
+              <p className="font-semibold w-80 pr-10 text-right">
+                Issue Order No:
+              </p>
               <p className="col-start-3 collapse-4 col-end-8">HO-24-011383</p>
             </div>
             <div className="flex pb-2">
@@ -47,7 +68,9 @@ const GatePass = () => {
               <p className="col-start-3 collapse-4 col-end-8">HO-24-011383</p>
             </div>
             <div className="flex pb-2">
-              <p className="font-semibold w-80 pr-10 text-right">Invoice Date:</p>
+              <p className="font-semibold w-80 pr-10 text-right">
+                Invoice Date:
+              </p>
               <p className="col-start-3 collapse-4 col-end-8">25-Nov-2024</p>
             </div>
             <div className="flex pb-2">
@@ -57,7 +80,9 @@ const GatePass = () => {
               <p className="col-start-3 collapse-4 col-end-8">Mazaher (ESS)</p>
             </div>
             <div className="flex pb-2">
-              <p className="font-semibold w-80 pr-10 text-right">Customer Name:</p>
+              <p className="font-semibold w-80 pr-10 text-right">
+                Customer Name:
+              </p>
               <p className="col-start-3 collapse-4 col-end-8">Brac bank</p>
             </div>
             <div className="flex pb-2">
@@ -75,8 +100,12 @@ const GatePass = () => {
             <thead>
               <tr>
                 <th className="px-4 py-2 border border-slate-300 w-8">SI</th>
-                <th className="px-4 py-2 border border-slate-300">Material Name</th>
-                <th className="px-4 py-2 border border-slate-300 w-80">Quentity</th>
+                <th className="px-4 py-2 border border-slate-300">
+                  Material Name
+                </th>
+                <th className="px-4 py-2 border border-slate-300 w-80">
+                  Quentity
+                </th>
                 <th className="px-4 py-2 border border-slate-300 w-40">Unit</th>
               </tr>
             </thead>
@@ -86,7 +115,9 @@ const GatePass = () => {
                 <td className="border border-slate-300 text-left px-5">
                   Installation
                 </td>
-                <td className="border border-slate-300 text-right px-5">17.00</td>
+                <td className="border border-slate-300 text-right px-5">
+                  17.00
+                </td>
                 <td className="border border-slate-300 text-center px-5 capitalize">
                   pcs
                 </td>
@@ -97,7 +128,9 @@ const GatePass = () => {
                 <td className="border border-slate-300 text-left px-5">
                   Royal Bolt
                 </td>
-                <td className="border border-slate-300 text-right px-5">20.00</td>
+                <td className="border border-slate-300 text-right px-5">
+                  20.00
+                </td>
                 <td className="border border-slate-300 text-center px-5 capitalize">
                   pcs
                 </td>

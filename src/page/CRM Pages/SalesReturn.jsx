@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useRef } from "react";
+import { FaPrint } from "react-icons/fa";
 
 const SalesReturn = () => {
+
+  const salesReturn = useRef ();
+  const handlePrint = () => {
+    const printContents = salesReturn.current.innerHTML;
+    const originalContents = document.body.innerHTML;
+
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+    window.location.reload(); // Reload to restore event listeners if necessary
+  };
+
   return (
     <div className="pe-3 pt-2 object-cover">
-      <div className="container-lg mx-auto rounded-sm border-2 py-8">
+      <button
+        className="bg-yellow-400 text-white px-3 py-1 rounded mr-2 flex align-middle"
+        onClick={handlePrint}
+      >
+        <FaPrint className="mr-2 size-5" /> <p>Print</p>
+      </button>
+
+      <div className="container-lg mx-auto rounded-sm border-2 py-8" ref={salesReturn}>
         <div className="text-center">
           <h1 className="self-center font-semibold text-gray-800 text-2xl">
             Esauire Customer Care Ltd
